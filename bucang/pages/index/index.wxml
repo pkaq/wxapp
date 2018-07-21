@@ -1,0 +1,52 @@
+<!--index.wxml-->
+<form bindsubmit="handleCalculate" bindreset='handleReset'>
+<zan-panel >
+  <zan-cell title="补仓后成本价" class="zan-font-bold">
+    <zan-icon slot="icon" type="points"/>
+    <text class="zan-c-red">{{finalCost}}</text>
+  </zan-cell>
+</zan-panel>
+
+<zan-panel  hide-border>
+  <zan-cell title="交易所">
+    <zan-icon slot="icon" type="wap-home"/>
+    <zan-radio bind:change="handleRadioChange" items="{{ radio }}"/>
+  </zan-cell>
+  <zan-cell title="佣金" bindtouchend ='handleCommission'>
+    <zan-icon slot="icon" type="contact"/>
+    <text class="zan-c-green">{{options[selected].name}}</text>
+    <zan-actionsheet
+      show="{{ show }}"
+      actions="{{ options }}"
+      cancel-with-mask
+      bind:cancel="closeActionSheet"
+      bind:actionclick="handleActionClick"
+    />
+  </zan-cell>
+  <zan-cell title="持仓价格">
+    <zan-icon slot="icon" type="gold-coin"/>
+    <zan-field name="holdingPrice" value="{{holdingPrice}}" placeholder="请输入持仓价格" inputType="digit" right/>
+  </zan-cell>
+  <zan-cell title="持仓数量">
+    <zan-icon slot="icon" type="exchange"/>
+    <zan-stepper size="large" stepper="{{holdingNumber}}" min="100" step="100"       bind:change="handleHoldNumberChange"/>
+  </zan-cell>
+  <zan-cell title="补仓价格">
+    <zan-icon slot="icon" type="gold-coin"/>
+    <zan-field name="coverPrice" value="{{coverPrice}}" placeholder="请输入补仓价格" inputType="digit" right/>
+  </zan-cell>
+  <zan-cell title="补仓数量">
+    <zan-icon slot="icon" type="exchange"/>
+    <zan-stepper size="large" stepper="{{coverNumber}}" min="100" step="100" bind:change="handleCoverNumberChange"/>
+  </zan-cell>
+</zan-panel>
+
+<zan-row class="margin-top-10">
+  <zan-col col="9" offset="2" col-class="custom-zan-col">
+    <button formType="reset" form-type='reset'>重新计算</button>  
+  </zan-col>  
+  <zan-col col="9" offset="2" col-class="custom-zan-col">
+    <button type="primary" formType="submit" >计算成本</button>
+  </zan-col>  
+</zan-row>
+</form>

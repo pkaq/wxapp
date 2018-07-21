@@ -1,0 +1,11 @@
+{
+  "pages":[
+    "pages/index/index"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#D81E06",
+    "navigationBarTitleText": "股票补仓成本计算",
+    "navigationBarTextStyle":"white"
+  }
+}
