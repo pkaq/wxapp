@@ -1,0 +1,39 @@
+{
+  "name": "bcrn",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "test": "jest"
+  },
+  "dependencies": {
+    "react": "16.4.1",
+    "react-native": "0.55.4",
+    "dva": "^2.3.1",
+    "lodash": "^4.17.10",
+    "normalize.css": "^8.0.0",
+    "umi": "1.3.11",
+    "umi-plugin-dva": "^0.9.0",
+    "umi-plugin-polyfill": "^0.1.1",
+    "umi-plugin-routes": "^0.1.5"
+  },
+  "devDependencies": {
+    "babel-jest": "23.4.2",
+    "babel-preset-react-native": "5",
+    "jest": "23.4.2",
+    "react-test-renderer": "16.4.1",
+    "babel-eslint": "^8.2.3",
+    "electron": "^1.8.4",
+    "eslint": "^4.14.0",
+    "eslint-config-alloy": "^1.4.2",
+    "eslint-config-umi": "^0.1.1",
+    "eslint-plugin-flowtype": "^2.50.0",
+    "eslint-plugin-import": "^2.6.0",
+    "eslint-plugin-jsx-a11y": "^5.1.1",
+    "eslint-plugin-react": "^7.1.0",
+    "husky": "^0.12.0"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
+}
