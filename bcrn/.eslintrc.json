@@ -1,0 +1,51 @@
+{
+    "env": {
+        "browser": true,
+        "es6": true
+    },
+    "globals": { "module": true },
+    "extends": [
+      "airbnb-base",
+      "eslint:recommended",
+      "plugin:react/recommended",
+      "plugin:react/recommended"
+    ],
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": 2018,
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react"
+    ],
+    "rules": {
+        "indent": [
+            "error",
+            4
+        ],
+        "linebreak-style": [
+            "error",
+            "unix"
+        ],
+        "quotes": [
+            "error",
+            "single"
+        ],
+        "semi": [
+            "error",
+            "always"
+        ],
+        "no-multi-spaces": 1,
+        "react/jsx-tag-spacing": 1,
+        "jsx-quotes": 1,
+        "react/jsx-closing-bracket-location": 1,
+        "react/jsx-boolean-value": 1,
+        "react/no-string-refs": 1,
+        "react/self-closing-comp": 1,
+        "react/jsx-no-bind": 1,
+        "react/sort-comp": 1,
+        "react/jsx-pascal-case": 1
+    }
+}

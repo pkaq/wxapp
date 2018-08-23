@@ -95,7 +95,7 @@ Page({
     let finalCost = ((data.holdingNumber * formValue.holdingPrice) 
                    + (data.coverNumber * formValue.coverPrice) 
                    + (charge + transfer))
-                   / (this.data.holdingNumber + this.data.coverNumber);
+                   / (data.holdingNumber + data.coverNumber);
     finalCost = finalCost.toFixed(3);
     this.setData({
       finalCost: finalCost
@@ -129,6 +129,7 @@ Page({
       show: false
     })
   },
+  // 佣金选择确定
   handleActionClick({ detail }){
     this.setData({
       selected: detail.index,
